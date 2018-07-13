@@ -50,7 +50,7 @@ namespace ProjectStructure.BLL.Service
             {
                 cfg.CreateMap<TypePlane, TypePlaneDTO>().ForAllMembers(opt => opt.Ignore());
             }).CreateMapper();
-
+       
         }
     }
 }

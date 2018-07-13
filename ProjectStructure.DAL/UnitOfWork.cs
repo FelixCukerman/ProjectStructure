@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using ProjectStructure.DAL.Contracts;
 using ProjectStructure.DAL.Repositories;
+using ProjectStructure.DAL.Models;
 
 namespace ProjectStructure.DAL
 {
@@ -20,7 +21,7 @@ namespace ProjectStructure.DAL
         private TicketRepository ticketRepository;
         private TypePlaneRepository typePlaneRepository;
 
-        public AviatorRepository Aviators
+        public IRepository<Aviator> Aviators
         {
             get
             {
@@ -29,7 +30,7 @@ namespace ProjectStructure.DAL
                 return aviatorRepository;
             }
         }
-        public CrewRepository Crews
+        public  IRepository<Crew> Crews
         {
             get
             {
@@ -38,7 +39,7 @@ namespace ProjectStructure.DAL
                 return crewRepository;
             }
         }
-        public DepartureRepository Departures
+        public IRepository<Departure> Departures
         {
             get
             {
@@ -47,7 +48,7 @@ namespace ProjectStructure.DAL
                 return departureRepository;
             }
         }
-        public FlightRepository Flights
+        public IRepository<Flight> Flights
         {
             get
             {
@@ -56,7 +57,7 @@ namespace ProjectStructure.DAL
                 return flightRepository;
             }
         }
-        public PlaneRepository Planes
+        public IRepository<Plane> Planes
         {
             get
             {
@@ -65,7 +66,7 @@ namespace ProjectStructure.DAL
                 return planeRepository;
             }
         }
-        public StewardessRepository Stewardesses
+        public IRepository<Stewardess> Stewardesses
         {
             get
             {
@@ -74,7 +75,7 @@ namespace ProjectStructure.DAL
                 return stewardessRepository;
             }
         }
-        public TicketRepository Tickets
+        public IRepository<Ticket> Tickets
         {
             get
             {
@@ -83,7 +84,7 @@ namespace ProjectStructure.DAL
                 return ticketRepository;
             }
         }
-        public TypePlaneRepository TypesPlane
+        public IRepository<TypePlane> TypesPlane
         {
             get
             {
