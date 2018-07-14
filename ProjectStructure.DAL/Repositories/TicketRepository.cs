@@ -27,8 +27,10 @@ namespace ProjectStructure.DAL.Repositories
         {
             data.Tickets.Add(ticket);
         }
-        public void Update(Ticket ticket)
+        public void Update(int id, Ticket ticket)
         {
+            var item = data.Tickets.FirstOrDefault(x => x.Id == id);
+            item = ticket;
         }
         public void Delete(int id)
         {

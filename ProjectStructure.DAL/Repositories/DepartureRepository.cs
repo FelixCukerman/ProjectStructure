@@ -27,8 +27,10 @@ namespace ProjectStructure.DAL.Repositories
         {
             data.Departures.Add(departure);
         }
-        public void Update(Departure departure)
+        public void Update(int id, Departure departure)
         {
+            var item = data.Departures.FirstOrDefault(x => x.Id == id);
+            item = departure;
         }
         public void Delete(int id)
         {

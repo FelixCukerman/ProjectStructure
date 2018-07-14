@@ -10,7 +10,6 @@ namespace ProjectStructure.DAL.Repositories
     public class PlaneRepository : IRepository<Plane>
     {
         private DataSource data;
-
         public PlaneRepository(DataSource data)
         {
             this.data = data;
@@ -27,8 +26,10 @@ namespace ProjectStructure.DAL.Repositories
         {
             data.Planes.Add(plane);
         }
-        public void Update(Plane plane)
+        public void Update(int id, Plane plane)
         {
+            var item = data.Planes.FirstOrDefault(x => x.Id == id);
+            item = plane;
         }
         public void Delete(int id)
         {

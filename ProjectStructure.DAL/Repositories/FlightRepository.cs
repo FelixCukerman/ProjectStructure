@@ -29,6 +29,8 @@ namespace ProjectStructure.DAL.Repositories
         }
         public void Update(Flight flight)
         {
+            var item = data.Flights.FirstOrDefault(x => x.Number == id);
+            item = flight;
         }
         public void Delete(int id)
         {

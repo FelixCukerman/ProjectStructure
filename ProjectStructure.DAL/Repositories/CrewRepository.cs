@@ -27,8 +27,10 @@ namespace ProjectStructure.DAL.Repositories
         {
             data.Crews.Add(crew);
         }
-        public void Update(Crew crew)
+        public void Update(int id, Crew crew)
         {
+            var item = data.Crews.FirstOrDefault(x => x.Id == id);
+            item = crew;
         }
         public void Delete(int id)
         {

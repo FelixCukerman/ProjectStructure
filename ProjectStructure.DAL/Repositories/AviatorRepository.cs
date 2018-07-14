@@ -27,9 +27,10 @@ namespace ProjectStructure.DAL.Repositories
         {
             data.Aviators.Add(aviator);
         }
-        public void Update(Aviator aviator)
+        public void Update(int id, Aviator aviator)
         {
-
+            var item = data.Aviators.FirstOrDefault(x => x.Id == id);
+            item = aviator;
         }
         public void Delete(int id)
         {

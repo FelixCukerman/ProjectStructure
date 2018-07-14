@@ -27,8 +27,10 @@ namespace ProjectStructure.DAL.Repositories
         {
             data.TypePlanes.Add(typePlane);
         }
-        public void Update(TypePlane typePlane)
+        public void Update(int id, TypePlane typePlane)
         {
+            var item = data.TypePlanes.FirstOrDefault(x => x.Id == id);
+            item = typePlane;
         }
         public void Delete(int id)
         {

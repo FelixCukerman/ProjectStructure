@@ -27,9 +27,10 @@ namespace ProjectStructure.DAL.Repositories
         {
             data.Stewardesses.Add(stewardess);
         }
-        public void Update(Stewardess stewardess)
+        public void Update(int id, Stewardess stewardess)
         {
-
+            var item = data.Stewardesses.FirstOrDefault(x => x.Id == id);
+            item = stewardess;
         }
         public void Delete(int id)
         {
