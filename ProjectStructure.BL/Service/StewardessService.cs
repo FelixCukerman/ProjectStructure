@@ -26,9 +26,9 @@ namespace ProjectStructure.BLL.Service
         {
             unitOfWork.Stewardesses.Create(Mapper.Map<Stewardess>(stewardessDTO));
         }
-        public void Update(StewardessDTO stewardessDTO)
+        public void Update(int id, StewardessDTO stewardessDTO)
         {
-
+            unitOfWork.Stewardesses.Update(id, Mapper.Map<Stewardess>(stewardessDTO));
         }
         public void Delete(int id)
         {

@@ -27,9 +27,9 @@ namespace ProjectStructure.BLL.Service
         {
             unitOfWork.Crews.Create(Mapper.Map<Crew>(crewDTO));
         }
-        public void Update(CrewDTO crewDTO)
+        public void Update(int id, CrewDTO crewDTO)
         {
-
+            unitOfWork.Crews.Update(id, Mapper.Map<Crew>(crewDTO));
         }
         public void Delete(int id)
         {

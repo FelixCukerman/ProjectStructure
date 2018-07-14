@@ -9,7 +9,7 @@ namespace ProjectStructure.BLL.Contracts
         List<T> GetAll();
         T GetById(int id);
         void Create(T t);
-        void Update(T t);
+        void Update(int id, T t);
         void Delete(int id);
     }
 }

@@ -27,9 +27,9 @@ namespace ProjectStructure.BLL.Service
         {
             unitOfWork.Tickets.Create(Mapper.Map<Ticket>(ticketDTO));
         }
-        public void Update(TicketDTO ticketDTO)
+        public void Update(int id, TicketDTO ticketDTO)
         {
-
+            unitOfWork.Tickets.Update(id, Mapper.Map<Ticket>(ticketDTO));
         }
         public void Delete(int id)
         {

@@ -27,9 +27,9 @@ namespace ProjectStructure.BLL.Service
         {
             unitOfWork.Planes.Create(Mapper.Map<Plane>(planeDTO));
         }
-        public void Update(PlaneDTO planeDTO)
+        public void Update(int id, PlaneDTO planeDTO)
         {
-
+            unitOfWork.Planes.Update(id, Mapper.Map<Plane>(planeDTO));
         }
         public void Delete(int id)
         {

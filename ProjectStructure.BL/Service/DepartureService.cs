@@ -27,9 +27,9 @@ namespace ProjectStructure.BLL.Service
         {
             unitOfWork.Departures.Create(Mapper.Map<Departure>(departureDTO));
         }
-        public void Update(DepartureDTO crewDTO)
+        public void Update(int id, DepartureDTO departureDTO)
         {
-
+            unitOfWork.Departures.Update(id, Mapper.Map<Departure>(departureDTO));
         }
         public void Delete(int id)
         {
