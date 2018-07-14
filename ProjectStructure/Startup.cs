@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using ProjectStructure.BLL.Service;
 
 namespace ProjectStructure
 {
@@ -24,6 +25,14 @@ namespace ProjectStructure
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddScoped<AviatorService>();
+            services.AddScoped<CrewService>();
+            services.AddScoped<DepartureService>();
+            services.AddScoped<FlightService>();
+            services.AddScoped<PlaneService>();
+            services.AddScoped<StewardessService>();
+            services.AddScoped<TicketService>();
+            services.AddScoped<TypePlaneService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
