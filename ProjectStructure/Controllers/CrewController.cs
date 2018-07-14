@@ -44,6 +44,7 @@ namespace ProjectStructure.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]CrewDTO value)
         {
+            crewService.Update(id, value);
         }
         
         // DELETE: api/ApiWithActions/5

@@ -43,7 +43,7 @@ namespace ProjectStructure.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]TicketDTO value)
         {
-            
+            ticketService.Update(id, value);
         }
         
         // DELETE: api/ApiWithActions/5

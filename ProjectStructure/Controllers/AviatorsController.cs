@@ -42,8 +42,9 @@ namespace ProjectStructure.Controllers
         
         // PUT: api/Aviators/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]CrewDTO value)
+        public void Put(int id, [FromBody]AviatorDTO value)
         {
+            aviatorService.Update(id, value);
         }
         
         // DELETE: api/ApiWithActions/5
