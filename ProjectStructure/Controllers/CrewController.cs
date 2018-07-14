@@ -27,7 +27,7 @@ namespace ProjectStructure.Controllers
         }
 
         // GET: api/Crew/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public CrewDTO Get(int id)
         {
             return crewService.GetAll().FirstOrDefault(x => x.Id == id);

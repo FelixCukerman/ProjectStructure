@@ -26,7 +26,7 @@ namespace ProjectStructure.Controllers
         }
 
         // GET: api/Stewardess/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public StewardessDTO Get(int id)
         {
             return stewardessService.GetAll().FirstOrDefault(x => x.Id == id);

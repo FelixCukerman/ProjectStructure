@@ -27,7 +27,7 @@ namespace ProjectStructure.Controllers
         }
 
         // GET: api/Aviators/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public AviatorDTO Get(int id)
         {
             return aviatorService.GetAll().FirstOrDefault(x => x.Id == id);

@@ -26,7 +26,7 @@ namespace ProjectStructure.Controllers
         }
 
         // GET: api/TypePlane/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public TypePlaneDTO Get(int id)
         {
             return typePlaneService.GetAll().FirstOrDefault(x => x.Id == id);

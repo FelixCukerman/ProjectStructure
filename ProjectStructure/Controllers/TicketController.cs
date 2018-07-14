@@ -26,7 +26,7 @@ namespace ProjectStructure.Controllers
         }
 
         // GET: api/Ticket/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public TicketDTO Get(int id)
         {
             return ticketService.GetAll().FirstOrDefault(x => x.Id == id);
